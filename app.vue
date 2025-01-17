@@ -1,7 +1,12 @@
+<script setup lang="ts">
+</script>
 <template>
-  <div>
-    <n-btn>
-      456
-    </n-btn>
-  </div>
+  <NConfigProvider :theme-overrides="themeOverrides()">
+    <NGlobalStyle />
+    <RouterView v-slot="{ Component }" class="min-hv-100">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </RouterView>
+  </NConfigProvider>
 </template>
