@@ -1,13 +1,10 @@
 <script setup>
-import {darkTheme} from "naive-ui"
 </script>
 
 <template>
-  <n-config-provider :theme="darkTheme">
-    <n-card>
-      <RouterView/>
-    </n-card>
-  </n-config-provider>
+  <NCard>
+    <NuxtPage/>
+  </NCard>
 </template>
 
 <style scoped>

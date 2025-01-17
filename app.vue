@@ -1,12 +1,16 @@
 <script setup lang="ts">
+import {themeOverrides} from "~/composables/theme/config";
 </script>
 <template>
-  <NConfigProvider :theme-overrides="themeOverrides()">
-    <NGlobalStyle />
-    <RouterView v-slot="{ Component }" class="min-hv-100">
-      <transition name="fade">
-        <component :is="Component" />
-      </transition>
-    </RouterView>
-  </NConfigProvider>
+  <div class="app-container">
+    <NConfigProvider :theme-overrides="themeOverrides()">
+      <NGlobalStyle/>
+      <NuxtLayout class="min-hv-100"/>
+    </NConfigProvider>
+  </div>
 </template>
+<style scoped>
+.app-container {
+  overflow: hidden;
+}
+</style>

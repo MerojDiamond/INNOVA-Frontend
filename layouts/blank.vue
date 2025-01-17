@@ -4,9 +4,8 @@
 
 <template>
   <div class="bg-gray-100">
-    <RouterView/>
+    <NuxtPage/>
   </div>
 </template>
 <style scoped>
-
 </style>
