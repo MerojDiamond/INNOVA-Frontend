@@ -65,6 +65,7 @@ const submit = async () => {
           </router-link>
         </div>
         <NButton
+            :disabled="loading"
             :loading="loading"
             attr-type="submit"
             class="w-full"
