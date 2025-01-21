@@ -4,8 +4,8 @@ import {getUserData} from "~/composables/localStorage/auth";
 
 export const useAuthStore = defineStore("auth", () => {
     let userData = getUserData();
-    const user = ref(userData.user ?? {});
-    const token = ref(userData.token ?? null);
+    const user = ref(userData?.user ?? {});
+    const token = ref(userData?.token ?? null);
 
     function setLoginData(data) {
         user.value = data.user;
