@@ -10,6 +10,9 @@ const extraDataStore = useExtraDataStore();
       <div class="flex items-center">
         <Icon v-if="extraDataStore.internetOnline" name="tabler:wifi" size="24" class="text-green-500"/>
         <Icon v-else name="solar:wifi-off" class="mr-2"/>
+        <span class="text-sm font-light text-gray-700">
+          {{ extraDataStore.internetOnline ? 'Connected' : 'Not connected' }}
+        </span>
       </div>
     </div>
   </NLayoutHeader>

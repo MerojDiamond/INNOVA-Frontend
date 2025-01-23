@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <NLayoutFooter bordered class="p-4">Chengfu Road</NLayoutFooter>
+  <NLayoutFooter bordered class="py-4 bg-transparent mx-4">Chengfu Road</NLayoutFooter>
 </template>
 
 <style scoped>
