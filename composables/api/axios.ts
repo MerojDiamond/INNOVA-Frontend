@@ -6,7 +6,7 @@ export const useAxios = () => {
     const store = useAuthStore();
     const toast = useToast();
     let client = axios.create({
-        baseURL: "http://innova/api",
+        baseURL: "https://innova-laravel.test/api",
         headers: {
             "Content-Type": "application/json",
             Accept: "application/json",

@@ -3,9 +3,11 @@
 </script>
 
 <template>
-  <div class="bg-gray-100">
-    <NuxtPage/>
-  </div>
+  <NLayout>
+    <NLayoutContent>
+      <NuxtPage class="min-h-svh mx-6"/>
+    </NLayoutContent>
+  </NLayout>
 </template>
 <style scoped>
 </style>

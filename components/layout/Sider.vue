@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {vAutoAnimate} from "@formkit/auto-animate";
 import {makeMenuItem} from "~/utils/sider";
+import {logout} from "~/composables/api/auth/logout";
 
 const collapsed = ref(false)
 const menuOptions = [
@@ -39,7 +40,7 @@ const menuOptions = [
     </NScrollbar>
     <NDivider class="!my-0"/>
     <div class="p-2">
-      <NButton quaternary type="error" class="w-full flex justify-start mb-1" v-auto-animate>
+      <NButton quaternary type="error" class="w-full flex justify-start mb-1" v-auto-animate @click="logout">
         <template #icon>
           <Icon name="solar:logout-2-outline"/>
         </template>
@@ -48,7 +49,17 @@ const menuOptions = [
           </span>
       </NButton>
     </div>
-  </NLayoutSider>
+  </NLayoutSider
+      bordered
+      collapse-mode="width"
+      :collapsed-width="64"
+      :width="240"
+      :collapsed="collapsed"
+      @collapse="collapsed = true"
+      @expand="collapsed = false"
+      show-trigger="bar"
+      :native-scrollbar="false"
+      content-class="max-h-svh flex flex-col h-full">
 </template>
 
 <style scoped>
