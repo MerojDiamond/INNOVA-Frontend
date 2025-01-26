@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 import {makeMenuItem} from "~/utils/sider";
 import {logout} from "~/composables/api/auth/logout";
+import {sidebarRoutes} from "~/utils/router";
 
-const menuOptions = [
-  makeMenuItem("dashboard", "Dashboard", "/dashboard"),
-]
+const menuOptions = sidebarRoutes()
 </script>
 
 <template>

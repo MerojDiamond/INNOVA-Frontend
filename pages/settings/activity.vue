@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>{{ $t("dashboard") }}</div>
+  <div>{{ $t("123") }}</div>
 </template>
 
 <style scoped>

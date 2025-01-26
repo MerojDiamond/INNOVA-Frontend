@@ -15,3 +15,10 @@ export const makeMenuItem = (key, label, url) => {
         key,
     }
 }
+export const makeMenuGroupItem = (key, label, children) => {
+    return {
+        label,
+        key,
+        children,
+    }
+}

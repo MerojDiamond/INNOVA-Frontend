@@ -2,10 +2,12 @@
 import {vAutoAnimate} from "@formkit/auto-animate";
 import {makeMenuItem} from "~/utils/sider";
 import {logout} from "~/composables/api/auth/logout";
-import {sidebarRoutes} from "~/utils/router";
 
 const collapsed = ref(false)
-const menuOptions = sidebarRoutes()
+const menuOptions = [
+  makeMenuItem("dashboard", "Dashboard", "/dashboard"),
+  makeMenuItem("users_roles", "Users & Roles", "/users"),
+]
 </script>
 
 <template>
