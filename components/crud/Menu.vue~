@@ -1,0 +1,29 @@
+<script lang="ts" setup>
+defineProps({
+  row: {
+    type: Object,
+    required: true
+  }
+})
+</script>
+
+<template>
+  <div class="flex gap-2">
+    <NButton circle quaternary type="info">
+      <Icon v-tippy="`Info`" name="tabler:info-circle" size="24"/>
+    </NButton>
+    <NButton circle quaternary type="warning">
+      <Icon v-tippy="`Edit`" name="tabler:edit" size="24"/>
+    </NButton>
+    <NButton circle quaternary type="error">
+      <Icon v-tippy="`Delete`" name="tabler:trash" size="24"/>
+    </NButton>
+    <NButton circle quaternary type="default">
+      <Icon v-tippy="`Others`" name="tabler:dots-vertical" size="24"/>
+    </NButton>
+  </div>
+</template>
+
+<style scoped>
+
+</style>

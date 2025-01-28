@@ -26,10 +26,5 @@ export const sidebarRoutes = () => {
             makeMenuItem("settings.activity", "Activity (Logging)", "/settings/activity"),
             makeMenuItem("settings.others", "Others", "/settings/others"),
         ]),
-        makeMenuGroupItem("admin", "Administration", [
-            makeMenuItem("admin.main", "Dashboard", "/admin/main"),
-            makeMenuItem("admin.database", "Database", "/admin/database"),
-            makeMenuItem("admin.others", "Others", "/admin/others"),
-        ]),
     ]
 }
